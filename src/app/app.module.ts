@@ -30,6 +30,9 @@ import { LoadingComponent } from './loading/loading.component';
 import { ArchiverDocumentComponent } from './archiver-document/archiver-document.component';
 import { ConsulterDocumentComponent } from './consulter-document/consulter-document.component';
 import { StatsComponent } from './stats/stats.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -40,35 +43,38 @@ import { StatsComponent } from './stats/stats.component';
     LoadingComponent,
     ArchiverDocumentComponent,
     ConsulterDocumentComponent,
-    StatsComponent
+    StatsComponent,
+    NotFoundComponent
   ],
-    imports: [
-        HttpClientModule,
-        MatSliderModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatSidenavModule,
-        MatListModule,
-        MatIconModule,
-        MatToolbarModule,
-        MatButtonModule,
-        MatCardModule,
-        MatChipsModule,
-        MatTableModule,
-        MatDialogModule,
-        ReactiveFormsModule,
-        MatFormFieldModule,
-        MatRadioModule,
-        MatDatepickerModule,
-        MatInputModule,
-        MatNativeDateModule,
-        FormsModule,
-        NgxEchartsModule.forRoot({
-            echarts: () => import('echarts')
-        }),
-        MatSelectModule
-    ],
+  imports: [
+    HttpClientModule,
+    MatSliderModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatTableModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
+    MatSelectModule,
+    MatCheckboxModule,
+    MatPaginatorModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

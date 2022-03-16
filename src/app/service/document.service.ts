@@ -34,4 +34,16 @@ export class DocumentService {
   delete(id: string): any {
     return this.http.delete<Document>(this.url + "/" + id);
   }
+
+  stats(){
+    return this.http.get<any[]>(this.url + "/stats");
+  }
+
+  statsByDate(){
+    return this.http.get<any[]>(this.url + "/stats/date");
+  }
+
+  statsByType(){
+    return this.http.get<any[]>(this.url + "/stats/type");
+  }
 }

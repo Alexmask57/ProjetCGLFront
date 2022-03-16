@@ -41,14 +41,12 @@ export class ArchiverDocumentComponent implements OnInit {
   }
 
   submit(document: any) {
-    if(this.documentModel.path == undefined)
-      document.path = "";
-    else
+    if(this.documentModel.path != undefined){
       document.path = this.documentModel.path;
-    console.log(document);
-    this.documentService.create(document?.nom as string, document?.path as string, document?.type as string).subscribe(res => {
-
-    });
+      this.documentService.create(document?.nom as string, document?.path as string, document?.type as string).subscribe(res => {
+        location.reload();
+      });
+    }
   }
 
   private static buildForm(): FormGroup {
