@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="side">
+    <mat-nav-list>
+      <mat-list-item [routerLink]="['/Home']">
+        <i mat-list-icon class="fa-solid fa-gamepad" style="width: auto; height: auto"></i>
+        <span class="full-width">Accueil</span>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/ListAll']">
+        <span class="full-width">Consulter les documents</span>
+        <mat-icon mat-list-icon>games</mat-icon>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/Add']">
+        <span class="full-width">Archiver un document</span>
+        <mat-icon mat-list-icon>face</mat-icon>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/Stats']">
+        <span class="full-width">Statistiques</span>
+        <i mat-list-icon class="fa-solid fa-chart-column"></i>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content class="sidenav_container">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
