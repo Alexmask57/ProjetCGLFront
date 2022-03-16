@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://smashbros-unofficial-api.vercel.app/api/v1/ultimate/characters",
+    "target": "http://localhost:8080",
     "secure": true,
     "changeOrigin": true,
     "pathRewrite": {

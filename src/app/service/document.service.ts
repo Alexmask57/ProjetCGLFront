@@ -7,7 +7,7 @@ import {Observable} from "rxjs";
 })
 export class DocumentService {
 
-  private url = "http://localhost:8080/doc"; //url vers l'api
+  private url = "http://localhost:4200/api/doc"; //url vers l'api
 
   constructor(private readonly http: HttpClient) { }
 

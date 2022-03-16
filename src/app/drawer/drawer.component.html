@@ -2,20 +2,20 @@
   <mat-drawer #drawer mode="side">
     <mat-nav-list>
       <mat-list-item [routerLink]="['/Home']">
-        <i mat-list-icon class="fa-solid fa-gamepad" style="width: auto; height: auto"></i>
+        <i mat-list-icon class="fa-solid fa-house" style="width: auto; height: auto"></i>
         <span class="full-width">Accueil</span>
       </mat-list-item>
       <mat-list-item [routerLink]="['/ListAll']">
+        <i mat-list-icon class="fa-solid fa-folder-open" style="width: auto; height: auto"></i>
         <span class="full-width">Consulter les documents</span>
-        <mat-icon mat-list-icon>games</mat-icon>
       </mat-list-item>
       <mat-list-item [routerLink]="['/Add']">
+        <i mat-list-icon class="fa-solid fa-circle-plus" style="width: auto; height: auto"></i>
         <span class="full-width">Archiver un document</span>
-        <mat-icon mat-list-icon>face</mat-icon>
       </mat-list-item>
       <mat-list-item [routerLink]="['/Stats']">
+        <i mat-list-icon class="fa-solid fa-chart-pie" style="width: auto; height: auto"></i>
         <span class="full-width">Statistiques</span>
-        <i mat-list-icon class="fa-solid fa-chart-column"></i>
       </mat-list-item>
     </mat-nav-list>
   </mat-drawer>

@@ -1,4 +1,16 @@
 <div class="container">
-    <h1>Bienvenue sur le site de gestion des documents</h1>
-
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Bienvenue sur le site de gestion des documents</h1>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center p-3">
+      <button class="btn btn-outline-info" [routerLink]="['/ListAll']">Afficher tous les documents</button>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center p-3">
+      <button class="btn btn-outline-info" [routerLink]="['/Add']">Ajouter un document</button>
+    </div>
+    <div class="col-md-6 d-flex align-items-center justify-content-center p-3">
+      <button class="btn btn-info" [routerLink]="['/Stats']">Statistiques</button>
+    </div>
+  </div>
 </div>
