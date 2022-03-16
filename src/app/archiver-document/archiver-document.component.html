@@ -1,1 +1,39 @@
-<p>archiver-document works!</p>
+<mat-card class="mat-whiteframe-2dp">
+
+  <mat-card-title><span>➕ Ajouter un Participant</span></mat-card-title>
+  <mat-card-content>
+    <form novalidate [formGroup]="form">
+      <mat-form-field class="name">
+        <mat-label>Nom de l'archive</mat-label>
+        <input matInput formControlName="nom" name="nom" matInput placeholder="Nom de l'archive" required/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Type d'archive</mat-label>
+        <mat-select formControlName="type" name="type">
+          <mat-option *ngFor="let type of types" [value]="type.nomType">
+            {{type.nomType}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <input #fileInput type="file" (change)="onFileSelected($event)" name="path" style="display: none;"/>
+      <div *ngIf="documentModel.path">
+        <button mat-flat-button color="warn" (click)="documentModel.path = null;">
+          <mat-icon>
+            cancel
+          </mat-icon>
+        </button>
+      </div>
+      <div class="file-upload" *ngIf="!documentModel.path">
+        <button type="button" (click)="fileInput.click()" mat-fab>
+          <mat-icon>
+            image
+          </mat-icon>
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+    <button mat-button type="submit" color="primary" (click)="submit(form.value)" [disabled]="!form.valid">Valider
+    </button>
+</mat-card>

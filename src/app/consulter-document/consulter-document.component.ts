@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {DocumentService} from "../service/document.service";
+import {Document} from "../../models/Document";
 
 @Component({
   selector: 'consulter-document',

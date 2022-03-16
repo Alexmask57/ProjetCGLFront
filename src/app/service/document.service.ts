@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Document} from "../../models/Document";
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +27,8 @@ export class DocumentService {
     return this.http.get<Document>(this.url + '/' + id);
   }
 
-  create(nom: string, path: string): Observable<Document> {
-    return this.http.post<Document>(this.url, {"nom": nom, "path": path});
+  create(nom: string, path: string, type: string): Observable<Document> {
+    return this.http.post<Document>(this.url, {"nom": nom, "path": path, "type": type});
   }
 
   delete(id: string): any {
